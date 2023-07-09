@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+        #highlight {
+            border-bottom: 2px solid black;
+            color: black;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .top-menu {
+            background: black;
+            color: white;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-column-gap: 9em;
+            grid-row-gap: 1em;
+            padding: 14px 64px;
+            margin-bottom: 36px;
+        }
+
+        .top-menu .page {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .top-menu .page a {
+            color: white;
+        }
+
+        .top-menu .icon {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .top-menu .icon a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .top-menu .icon i {
+            padding: 0 16px;
+            cursor: pointer;
+            font-size: 19px;
+        }
+
+        .lines {
+            border-right: 1px solid white;
+            height: 36px;
+        }
+
+        .main-content .selector {
+            padding: 16px 0px;
+            text-align: center;
+        }
+
+        .main-content .selector a {
+            font-size: 17px;
+            font-weight: 500;
+            color: #989898;
+            padding: 12px 22px;
+        }
+
+        #products {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+            padding: 2.5em 0;
+        }
+
+        #products .card {
+            max-width: 18em;
+            padding: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.7s;
+        }
+
+        #products .card:hover {
+            transform: translateY(-0.1in);
+        }
+
+        #products .card .image-container {
+            text-align: left;
+        }
+
+        #products .card .image-container img {
+            max-width: 100%;
+            object-fit: contain;
+            height: 15em;
+            box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+        }
+
+        #products .card .container {
+            padding-top: 1em;
+            color: #110f29;
+        }
+
+        #products .card .container h5 {
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        #products .card .container h6 {
+            font-weight: 400;
+            font-size: 14px;
+            padding-top: 5px;
+        }
+
+        #products .card .container button {
+            background-color: white;
+            border: none;
+            border: solid 1px black;
+            margin-top: 14px;
+            padding: 5px 0px;
+            text-transform: uppercase;
+            font-weight: 500;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        #products .card .container button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-menu">
+            <div>
+                <img src="images/logo.png" alt="lennin">
+            </div>
+            <div class="page">
+                <a href="#">Sản phẩm</a>
+                <a href="#">Sale</a>
+                <a href="#">Thư viện</a>
+                <a href="#">Giới thiệu</a>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="login/login.html">
+                    <i class="fa-solid fa-user" id="users"></i>
+                </a>
+                <div class="lines"></div>
+                <i class="fa-solid fa-globe"></i>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="selector">
+                <a href="#" id="highlight">Deck</a>
+                <a href="#">Accessories</a>
+                <a href="#">Clothing</a>
+                <a href="#">S/S 2022</a>
+                <a href="#">S/S 2021</a>
+                <a href="#">S/S 2020</a>
+                <a href="#">S/S 2019</a>
+                <a href="#">Tất cả</a>
+            </div>
+
+            <div id="products"></div>
+        </div>
+
+
+    </div>
+</body>
+<script>
+    let products = {
+        data: [
+            {
+                name: "MATRIX 1999 DECK",
+                price: "780.000đ - 1.470.000đ",
+                image: "images/matrix-1999-1.jpg"
+            },
+
+            {
+                name: "RAEDA DECK",
+                price: "780.000đ - 1.470.000đ",
+                image: "images/Raeda-Deck.jpg"
+            },
+
+            {
+                name: "MUSTY DECK",
+                price: "780.000đ - 1.470.000đ",
+                image: "images/Musty-Deck.jpg"
+            },
+
+            {
+                name: "TRISTIQUE DECK",
+                price: "780.000đ - 1.470.000đ",
+                image: "images/Tristique-deck.jpg"
+            },
+
+            {
+                name: "FIELD TRIP DECK",
+                price: "780.000đ - 1.470.000đ",
+                image: "images/Fied-Trip-deck.jpg"
+            },
+
+            {
+                name: "TARO RAINBOW LOGO DECK",
+                price: "780.000đ - 1.670.000đ",
+                image: "images/web-5.jpg"
+            },
+
+            {
+                name: "NEON RAINBOW LOGO DECK",
+                price: "780.000đ - 1.670.000đ",
+                image: "images/web-1.jpg"
+            },
+
+            {
+                name: "ORANAGE RAINBOW LOGO ",
+                price: "780.000đ - 1.670.000đ",
+                image: "images/web-2.jpg"
+            },
+
+            {
+                name: "BLUE RAINBOW LOGO DECK",
+                price: "780.000đ - 1.670.000đ",
+                image: "images/web-3.jpg"
+            },
+
+            {
+                name: "WHITE RAINBOW LOGO DECK",
+                price: "780.000đ - 1.670.000đ",
+                image: "images/web-4.jpg"
+            },
+
+            {
+                name: "CUTIS MODEL DECK",
+                price: "780.000đ - 1.670.000đ",
+                image: "images/cutis.jpg"
+            },
+
+            {
+                name: "CAM VU MODEL DECK",
+                price: "780.000đ - 1.670.000đ",
+                image: "images/cam-vu.jpg"
+            },
+
+            {
+                name: "SON NGUYEN MODEL DECK",
+                price: "780.000đ - 1.670.000đ",
+                image: "images/son-nguyen.jpg"
+            },
+        ]
+    }
+
+    for (let items of products.data) {
+
+        let card = document.createElement("div")
+        card.classList.add("card")
+
+        let imgContainer = document.createElement("div")
+        imgContainer.classList.add("image-container")
+
+        let image = document.createElement("img")
+        image.setAttribute("src", items.image)
+        imgContainer.appendChild(image)
+        card.appendChild(imgContainer)
+
+        let container = document.createElement("div")
+        container.classList.add("container")
+
+        let name = document.createElement("h5");
+        name.classList.add("product-name");
+        name.innerText = items.name.toUpperCase();
+        container.appendChild(name);
+
+        let price = document.createElement("h6");
+        price.innerHTML = "<b>Price:</b> " + items.price;
+        container.appendChild(price);
+
+        let btn = document.createElement("button")
+        btn.setAttribute("onclick", "addToCart()")
+        btn.innerHTML = "Thêm vào giỏ hàng"
+        container.appendChild(btn)
+
+        card.appendChild(container);
+        document.getElementById("products").appendChild(card);
+    }
+    
+    for (let i of products.data) {
+    let product = JSON.parse(localStorage.product)
+    product.push({
+        name: items.name,
+        price: items.price,
+        images: items.image
+    })
+
+    localStorage.setItem("product", JSON.stringify(product))
+}
+</script>
+
+</html>

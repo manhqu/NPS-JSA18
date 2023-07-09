@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log(
+        //     JSON.parse(
+        //         localStorage.getItem("Menu")
+        //     )
+        // );
+        // console.log(
+        //     JSON.parse(
+        //         localStorage.obj
+        //     )
+        // );
+
+
+let Menu = JSON.parse(localStorage.getItem("Menu"))
+Menu.push("ếch")
+localStorage.setItem("Menu", JSON.stringify(Menu))
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>
