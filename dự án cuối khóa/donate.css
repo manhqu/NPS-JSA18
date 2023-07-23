@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+.arrow-left{
+    width: 10px;
+    height: 10px;
+    
+}
+
+
+  body {
+    background-image: url("https://makintahu.com/wp-content/uploads/2022/07/Website-Donasi-Online-Terpercaya-Dan-Layak-Dipilih.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(5px);
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding:10px 40px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    flex-grow: 0.2;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 17px 2px rgb(255, 255, 255, 0.8);
+  }
+
+  span{
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+  }
+
+header {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    display: flex;
+    padding: 10px 0 10px 0;
+}
+
+
+
+.input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    padding: 0 0 0 45px;
+    background:rgba(255, 255, 255, 0.8)
+}
+
+i{
+    font-size: 15px;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    color: rgb(0, 0, 0);
+}
+
+p {
+    font-size: 15px;
+    color:rgb(255, 255, 255);
+}
+
+.submit {
+    font-size: 15px;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    width: 30%;
+    text-transform: uppercase;
+    margin: 8px 0 10px 0;
+    border-radius: 30px;
+    margin-left: 70%;
+    padding-right: 80px;
+    border: none;
+}
+
+.submit:hover {
+    background-color: rgb(2, 249, 117);
+    border: rgb(2, 249, 117);
+    color: black;
+}
+
+
+
+
+
+

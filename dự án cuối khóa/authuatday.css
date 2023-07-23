@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    text-decoration: none;
+    outline: none;
+    border: none;
+  }
+
+  .container{
+    background-color: rgb(180, 120, 70);
+  }
+
+
+html{
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+
+#nav li {
+    display: inline-block;
+    padding: 20px;
+    
+    
+    
+  }
+  
+  #nav li:hover {
+    background-color: darkgray;
+    color: black;
+  }
+  #nav li a{
+    color: white;
+  }
