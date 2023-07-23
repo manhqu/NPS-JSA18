@@ -10,6 +10,16 @@
     border: none;
   }
 
+  #float-right{
+    float: right;
+    
+  }
+  #icon{
+    padding-left: 1051px;
+    color: white;
+    font-size: 14px;
+    }
+
   .container{
     background-color: rgb(180, 120, 70);
   }

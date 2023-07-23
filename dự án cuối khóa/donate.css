@@ -6,11 +6,9 @@
     box-sizing: border-box;
   }
   
-.arrow-left{
-    width: 10px;
-    height: 10px;
-    
-}
+/* #float-right{
+    float: right;
+} */
 
 
   body {
